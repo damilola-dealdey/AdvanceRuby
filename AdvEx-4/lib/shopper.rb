@@ -1,11 +1,15 @@
 class Shopper
-  def initialize &block
+  def initialize #&block
     @shopping_list = Hash.new(0)
-    yield(self)
+    #yield(self)
   end
 
   def add item_name, quantity
     @shopping_list[item_name] += quantity
+  end
+
+  def list &block
+    instance_eval(&block)
   end
 
   def to_s

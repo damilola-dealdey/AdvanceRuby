@@ -1,16 +1,20 @@
 require_relative "../lib/string"
 
-print "String  to search through : "
+print "Enter desired string : "
 str = Mystring.new(gets)
 #puts str
 
-print "Sub-string to search for : "
-substr = gets
+print "Enter the desired method's name' : "
+method_name = gets.chomp
 
 # puts substr
 # puts str.include? substr
 
-puts str.send(:excludes?, substr)
+puts eval("str.#{method_name}")
+
+
+
+#puts str.send(:excludes?, substr)
 #puts str.send(:include?, substr)
 
 # out =  "the string contains the sub."

@@ -20,3 +20,17 @@ class << money
 end
 
 money.convert_me_again
+
+#Other Singletons
+#1
+money.instance_eval do
+  def print; puts "Money is printing..."; end
+end
+
+money.print
+
+#2
+money.define_singleton_method(:count) do
+  puts "I have plenty money"
+end
+money.count
