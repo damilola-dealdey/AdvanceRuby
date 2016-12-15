@@ -10,8 +10,11 @@ method_name = gets.chomp
 # puts substr
 # puts str.include? substr
 
-puts eval("str.#{method_name}")
-
+begin
+  puts eval("str.#{method_name}")  
+rescue => exception
+  puts exception
+end
 
 
 #puts str.send(:excludes?, substr)

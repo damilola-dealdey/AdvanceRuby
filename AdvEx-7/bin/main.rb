@@ -5,8 +5,8 @@ filename = gets()
 classname = filename.chomp("s\n")
 filename.chop!
 
-classCreator = ClassCreator.new
-instances = classCreator.create_class(classname,filename)
+class_creator = ClassCreator.new
+instances = class_creator.create_class(classname,filename)
 
 p instances
 
